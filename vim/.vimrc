@@ -40,6 +40,13 @@ filetype plugin indent on    " required
 " ------------------------------ STARTUP ------------------------------
 " Line numbering
 set number
+" Stop auto indent
+set noautoindent
+set nosmartindent
+set nocindent
+set indentexpr=
+filetype indent off
+filetype plugin indent off
 " Stop auto commenting
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 " NERDTree
