@@ -40,9 +40,12 @@ filetype plugin indent on    " required
 " ------------------------------ STARTUP ------------------------------
 " Line numbering
 set number
+" Text width
+set textwidth=80
 " Stop auto indent
 set noautoindent
-set nosmartindent
+" Set smart indent
+set smartindent
 set nocindent
 set indentexpr=
 filetype indent off
