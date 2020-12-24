@@ -115,7 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Set CC and CXX environment variables.
-#export CC=/usr/bin/clang-8
-#export CXX=/usr/bin/clang++-8
