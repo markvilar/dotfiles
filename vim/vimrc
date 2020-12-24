@@ -38,20 +38,37 @@ filetype plugin indent on    " required
  
 
 " ------------------------------ STARTUP ------------------------------
+" Tab stop
+set ts=4
+
+" Set
+set sts=4
+
+" Expand tabs to spaces
+"set et
+
+" Shift width
+set shiftwidth=0
+
 " Line numbering
 set number
+
 " Text width
 set textwidth=80
+
 " Stop auto indent
 set noautoindent
+
 " Set smart indent
 set smartindent
 set nocindent
 set indentexpr=
 filetype indent off
 filetype plugin indent off
+
 " Stop auto commenting
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
 " NERDTree
 au VimEnter *  NERDTree
 
