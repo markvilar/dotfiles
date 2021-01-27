@@ -1,7 +1,5 @@
-" /////////////////////////////////////////////////////////////////////////////
-" //// VUNDLE /////////////////////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
-
+" ------------------------------ VUNDLE ------------------------------
+"
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -14,10 +12,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" /////////////////////////////////////////////////////////////////////////////
-" //// PLUGINS ////////////////////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
 
+
+" ------------------------------ PLUGINS ------------------------------
 " C++ syntax highlighting
 Plugin 'octol/vim-cpp-enhanced-highlight'
 " NERDTree
@@ -27,28 +24,18 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" /////////////////////////////////////////////////////////////////////////////
-" //// BACKUP /////////////////////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
+" ------------------------------ STARTUP ------------------------------
 
-set backupdir=~/.vim/backup/
-set directory=~/.vim/backup/
-
-" /////////////////////////////////////////////////////////////////////////////
-" //// STARTUP ////////////////////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
-
-" Tab stop
-set ts=4
-
-" Set
-set sts=4
-
-" Expand tabs to spaces
-"set et
-
-" Shift width
-set shiftwidth=0
+" Identation settings
+set tabstop=4           " Tab whitespace equivalents.
+set shiftwidth=4	" Indenting is 4 whitespaces.
+set softtabstop=4       " Tab and backspace keypresses remove 4 whitespaces.
+set noexpandtab		" Turn off convertion of tabs into whitespaces.
+set noautoindent	" Turn off auto indentation.
+set smartindent	        " Turn off smart indentation.
+set nocindent		" Turn off C program specific rules.
+filetype indent off
+filetype plugin indent off
 
 " Line numbering
 set number
@@ -56,26 +43,15 @@ set number
 " Text width
 set textwidth=80
 
-" Stop auto indent
-set noautoindent
-
-" Set smart indent
-set smartindent
-set nocindent
-set indentexpr=
-filetype indent off
-filetype plugin indent off
-
 " Stop auto commenting
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " NERDTree
 au VimEnter *  NERDTree
 
-" /////////////////////////////////////////////////////////////////////////////
-" //// CPP Enhanced Highlight /////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
 
+
+" ------------------------------ CPP Enhanced Highlight ------------------------------
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
