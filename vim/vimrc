@@ -1,7 +1,5 @@
-" /////////////////////////////////////////////////////////////////////////////
-" //// VUNDLE /////////////////////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
-
+" ---------------------------------- VUNDLE -----------------------------------
+"
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -14,10 +12,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" /////////////////////////////////////////////////////////////////////////////
-" //// PLUGINS ////////////////////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
 
+
+" ---------------------------------- PLUGINS ----------------------------------
 " C++ syntax highlighting
 Plugin 'octol/vim-cpp-enhanced-highlight'
 " NERDTree
@@ -27,44 +24,21 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" /////////////////////////////////////////////////////////////////////////////
-" //// BACKUP /////////////////////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
+" ----------------------------------- SETUP -----------------------------------
 
-set backupdir=~/.vim/backup/
-set directory=~/.vim/backup/
+set tabstop=4                   " Tab is 4 whitespace coloumns.
+set shiftwidth=4                " Indenting is 4 whitespaces.
+set softtabstop=4               " Backspace keypresses remove 4 whitespaces.
+set noexpandtab                 " Conversion of tabs into whitespaces.
+set autoindent                  " Auto indentation.
+set smartindent                 " Smart indentation.
+set nocindent                   " C program specific indentation.
+filetype indent off             " Filetype-based indentation.
+filetype indent plugin off      " Filetype-based indentation.
 
-" /////////////////////////////////////////////////////////////////////////////
-" //// STARTUP ////////////////////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
-
-" Tab stop
-set ts=4
-
-" Set
-set sts=4
-
-" Expand tabs to spaces
-"set et
-
-" Shift width
-set shiftwidth=0
-
-" Line numbering
-set number
-
-" Text width
-set textwidth=80
-
-" Stop auto indent
-set noautoindent
-
-" Set smart indent
-set smartindent
-set nocindent
-set indentexpr=
-filetype indent off
-filetype plugin indent off
+set number                      " Line numbering.
+set textwidth=80                " Text width.
+set wrap                        " Text wrapping.
 
 " Stop auto commenting
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
@@ -72,10 +46,7 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 " NERDTree
 au VimEnter *  NERDTree
 
-" /////////////////////////////////////////////////////////////////////////////
-" //// CPP Enhanced Highlight /////////////////////////////////////////////////
-" /////////////////////////////////////////////////////////////////////////////
-
+" --------------------------- CPP Enhanced Highlight ---------------------------
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
