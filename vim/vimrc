@@ -1,4 +1,4 @@
-" ------------------------------ VUNDLE ------------------------------
+" ---------------------------------- VUNDLE -----------------------------------
 "
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -14,7 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 
 
-" ------------------------------ PLUGINS ------------------------------
+" ---------------------------------- PLUGINS ----------------------------------
 " C++ syntax highlighting
 Plugin 'octol/vim-cpp-enhanced-highlight'
 " NERDTree
@@ -24,24 +24,21 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" ------------------------------ STARTUP ------------------------------
+" ----------------------------------- SETUP -----------------------------------
 
-" Identation settings
-set tabstop=4           " Tab whitespace equivalents.
-set shiftwidth=4	" Indenting is 4 whitespaces.
-set softtabstop=4       " Tab and backspace keypresses remove 4 whitespaces.
-set noexpandtab		" Turn off convertion of tabs into whitespaces.
-set noautoindent	" Turn off auto indentation.
-set smartindent	        " Turn off smart indentation.
-set nocindent		" Turn off C program specific rules.
-filetype indent off
-filetype plugin indent off
+set tabstop=4                   " Tab is 4 whitespace coloumns.
+set shiftwidth=4                " Indenting is 4 whitespaces.
+set softtabstop=4               " Backspace keypresses remove 4 whitespaces.
+set noexpandtab                 " Conversion of tabs into whitespaces.
+set autoindent                  " Auto indentation.
+set smartindent                 " Smart indentation.
+set nocindent                   " C program specific indentation.
+filetype indent off             " Filetype-based indentation.
+filetype indent plugin off      " Filetype-based indentation.
 
-" Line numbering
-set number
-
-" Text width
-set textwidth=80
+set number                      " Line numbering.
+set textwidth=80                " Text width.
+set wrap                        " Text wrapping.
 
 " Stop auto commenting
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
@@ -49,9 +46,7 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 " NERDTree
 au VimEnter *  NERDTree
 
-
-
-" ------------------------------ CPP Enhanced Highlight ------------------------------
+" --------------------------- CPP Enhanced Highlight ---------------------------
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
