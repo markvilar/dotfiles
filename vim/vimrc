@@ -1,4 +1,5 @@
 " ---- VUNDLE -----------------------------------------------------------------
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -11,34 +12,40 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-
-
 " ---- PLUGINS ----------------------------------------------------------------
+
 " C++ syntax highlighting
 Plugin 'octol/vim-cpp-enhanced-highlight'
+
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
+" Vim clang format
+Plugin 'rhysd/vim-clang-format'
+
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()               " required
+filetype plugin indent on       " required
 
 " ---- Config -----------------------------------------------------------------
 
 " Identation settings
-set tabstop=4					" Tab is 4 whitespace coloumns.
-set shiftwidth=4				" Indenting is 4 whitespaces.
-set softtabstop=4				" Backspace keypresses remove 4 whitespaces.
-set expandtab					" Conversion of tabs into whitespaces.
-set autoindent					" Auto indentation.
-set smartindent					" Smart indentation.
-set nocindent					" C program specific indentation.
-filetype indent off				" Filetype-based indentation.
-filetype indent plugin off		" Filetype-based indentation.
+set tabstop=4                   " Tab is 4 whitespace coloumns.
+set shiftwidth=4                " Indenting is 4 whitespaces.
+set softtabstop=4               " Backspace keypresses remove 4 whitespaces.
+set expandtab                   " Conversion of tabs into whitespaces.
+set autoindent                  " Auto indentation.
+set smartindent                 " Smart indentation.
+set nocindent                   " C program specific indentation.
+filetype indent off             " Filetype-based indentation.
+filetype indent plugin off      " Filetype-based indentation.
 
 set number                      " Line numbering.
 set textwidth=80                " Text width.
 set wrap                        " Text wrapping.
+
+" Do not show numbers when a terminal is opened.
+autocmd TerminalOpen * set nonu
 
 " Stop auto commenting
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
@@ -50,6 +57,7 @@ set clipboard=unnamedplus
 au VimEnter *  NERDTree
 
 " ---- CPP Enhanced Highlight -------------------------------------------------
+
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
