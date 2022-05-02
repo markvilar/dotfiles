@@ -47,6 +47,7 @@ set hlsearch                               " Highlight searches
 set incsearch                              " Incrementally search words
 set showcmd                                " Show command line in the last line
 set ruler                                  " Show line and column of cursor
+set splitbelow                             " Splits below current window
 
 " Do not show numbers when a terminal is opened.
 autocmd TerminalOpen * set nonu
