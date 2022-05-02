@@ -37,7 +37,6 @@ set nocindent                              " C program specific indentation
 filetype indent off                        " Filetype-based indentation
 filetype indent plugin off                 " Filetype-based indentation
 
-set cursorline                             " Activate cursor line
 set number                                 " Line numbering
 set textwidth=80                           " Text width
 set wrap                                   " Text wrapping
