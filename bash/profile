@@ -25,7 +25,5 @@ if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-$HOME/.local/bin:$PATH
-
 # Set caps equal to escape
 setxkbmap -option caps:escape
