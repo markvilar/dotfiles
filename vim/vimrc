@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'preservim/nerdtree'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'cespare/vim-toml'
 
 call vundle#end()                          " required
 
